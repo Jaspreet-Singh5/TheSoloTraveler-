@@ -1,0 +1,50 @@
+<% include ../partials/headerBlog %>
+
+    <div class= "ui main text container segment">
+        <div class= "ui huge header">
+            New Blog
+        </div>    
+        
+        <form class= "ui form" action= "/blogs" method= "POST">
+            <div class= "field">
+                <label>Title</label>
+                <input type= "text" name= "blog[title]">
+            </div>
+            
+            <div class= "field">
+                <label>Image</label>
+                <input type= "text" name= "blog[image]">
+            </div>
+            
+            <div class= "field">
+                <label>Blog content</label>
+                <textarea name= "blog[body]" required></textarea>
+            </div>
+            
+            <div class= "field">
+                <label>Aprox. Taxi Fare (1 KM): </label>
+                <input type= "text" name= "blog[taxiFare]">
+            </div>
+            
+            <div class= "field">
+                <label>Aprox. Meal Cost: </label>
+                <input type= "text" name= "blog[mealCost]">
+            </div>
+            
+            <div class= "field">
+                <label>Aprox. Water Cost (1 L): </label>
+                <input type= "text" name= "blog[waterCost]">
+            </div>
+            
+            <div class= "field">
+                <label>Aprox. Nearest General Store Distance: </label>
+                <input type= "text" name= "blog[storeDst]">
+            </div>
+            
+            <input type= "submit" value= "Submit" class= "ui violet big basic button">
+        </form>
+
+    </div>
+    
+    
+<% include ../partials/footerBlog %>

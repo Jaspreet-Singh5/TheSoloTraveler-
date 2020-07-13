@@ -1,0 +1,71 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+        <section class="section-book">
+            <div class="row">
+                <div class="book">
+                    <div class="book__form">
+                        <form class="form" action="/tourList" method="post">
+                            <div class="u-margin-bottom-medium">
+                                <h2 class="heading-secondary">
+                                    Create New Tours
+                                </h2>
+                            </div>
+
+                            <div class="form__group" style="margin-bottom: 4px; margin-top: -25px; width: 100%">
+                                <input type="text" value="" class="form__input" placeholder="Name" required id="name" name="tour[name]"
+                                style="height: 1rem"/>
+                                <label class="form__label" for="name">Name</label>
+                            </div>
+                            
+                            <div class="form__group"  style="display: inline-block; margin-bottom: 4px">
+                                <input type="text" value="" style="height: 1rem; width: 85%; display: inline-block" class="form__input" placeholder="Days" required id="days" name="tour[days]"/>
+                                <label class="form__label" for="days">Days</label>
+                            </div>
+                            
+                            <div class="form__group" style="display: inline-block; margin-bottom: 4px">
+                                <input type="text" value="" style="height: 1rem; width: 85%; display: inline-block" class="form__input" placeholder="Number of people" required id="numOfPeople" name="tour[numOfPeople]"/>
+                                <label class="form__label" for="numOfPeople">Number of people</label>
+                            </div>
+                            
+                            <div class="form__group" style="display: inline-block; margin-bottom: 4px">
+                                <input type="text" value="" style="height: 1rem; width: 85%; display: inline-block" class="form__input" placeholder="Number of guides" required id="numOfGuides" name="tour[numOfGuides]"/>
+                                <label class="form__label" for="numOfGuides">Number of guides</label>
+                            </div>
+                            
+                            <div class="form__group" style="display: inline-block; margin-bottom: 4px">
+                                <input type="text" value="" style="height: 1rem; width: 85%; display: inline-block" class="form__input" placeholder="Sleep" required id="sleep" name="tour[sleep]"/>
+                                <label class="form__label" for="sleep">Sleeping facility</label>
+                            </div>
+                            
+                            <div class="form__group" style="display: inline-block; margin-bottom: 4px">
+                                <input type="text" value="" style="height: 1rem; width: 85%; display: inline-block" class="form__input" placeholder="Difficulty" required id="difficulty" name="tour[difficulty]"/>
+                                <label class="form__label" for="name">Difficulty</label>
+                            </div>
+                            
+                            <div class="form__group" style="display: inline-block; margin-bottom: 4px">
+                                <input type="text" value="" style="height: 1rem; width: 85%; display: inline-block" class="form__input" placeholder="Price" required id="price" name="tour[price]"/>
+                                <label class="form__label" for="price">Price</label>
+                            </div>
+                            
+                            
+                            <div class="form__group" style="margin-bottom: 4px">
+                                <input type="text" value="" style="height: 1rem" class="form__input" placeholder="Image" required id="image" name="tour[image]"/>
+                                <label class="form__label" for="Image">Image</label>
+                            </div>
+                            
+                            
+                            <div class="form__group">
+                                <button class="btn btn--green" style="font-size: 1rem">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+    </div>
+    
+</div>

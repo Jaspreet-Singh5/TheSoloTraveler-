@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="../img/logo.png" type="image/png">
+        <title>TheSoloTraveler</title>
+        <link rel= "stylesheet" type= "text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <link rel= "stylesheet" type= "text/css" href= "/stylesheets/blog_app.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    </head>
+    <body>
+        
+        <div class= "ui fixed inverted menu" style="background-image: linear-gradient(to right, rgba(46, 204, 113,.6), rgba(39, 174, 96,.7))">
+            <div class= "ui container">
+                <div class= "header item"><a href="/">TheSoloTraveler</a></div>
+                <a href= "/blogs" class= "item">Home</a>
+                <a href= "/blogs/new" class= "item">New Post</a>
+                
+                <div class="right menu">
+                    <% if(!currentUser){ %>
+                        <a href = "/loginblog" class= "ui item">Login</a>
+                        <a href = "/registerblog" class= "ui item">Sign Up</a>
+                    <% } else{ %>
+                        <a href = "#" class= "ui item" id="signedAs">Signed in as <%= currentUser.username %></a>
+                        <a href = "/logoutblog" class= "ui item">Logout</a>
+                    <% } %>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="ui main text container">
+            <% if(error && error.length > 0){ %>
+                <div class="ui warning message">
+                  <div class="header">
+                    <%= error %>
+                  </div>
+                </div>
+            <% } %>
+            
+            <% if(success && success.length > 0){ %>
+                <div class="ui success message">
+                  <div class="header">
+                    <%= success %>
+                  </div>
+                </div>
+            <% } %>
+        </div>
+        
+    
